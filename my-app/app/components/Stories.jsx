@@ -8,7 +8,7 @@ export default function Stories() {
     useEffect(() => {
         const storyU = minifaker.array(20, (i) => ({
             username: minifaker.username({ locale: 'en' }),
-            img: `https://i.pravatar.cc/150?img=${Math.ceil(Math.random * 70)}`,
+            img: `https://i.pravatar.cc/150?img=${Math.ceil(Math.random() * 70)}`,
             id: i,
         }));
         setStoryU(storyU);
