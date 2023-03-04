@@ -1,7 +1,9 @@
+import Feed from './components/Feed';
+
 export default function Home() {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline"></h1>
+        <div className="min-h-screen bg-gray-50">
+            <Feed></Feed>
         </div>
     );
 }

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline';
 import { HomeIcon } from '@heroicons/react/24/solid';
 
@@ -15,6 +14,7 @@ export default function Header() {
                         className="object-contain"
                     />
                 </div>
+
                 <div className="relative w-10 h-24 cursor-pointer lg:hidden">
                     <Image
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png"
@@ -22,6 +22,7 @@ export default function Header() {
                         className="object-contain"
                     />
                 </div>
+
                 {/* Middle */}
 
                 <div className="relative mt-1">
