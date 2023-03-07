@@ -3,6 +3,7 @@ import minifaker from 'minifaker';
 import { useEffect, useState } from 'react';
 import 'minifaker/locales/en';
 import Story from './Story';
+
 export default function Stories() {
     const [storyU, setStoryU] = useState([]);
     useEffect(() => {
@@ -15,7 +16,7 @@ export default function Stories() {
         console.log(storyU);
     }, []);
     return (
-        <div>
+        <div className="flex p-6 mt-8 space-x-2 overflow-x-scroll bg-white border border-gray-200 rounded-sm scrollbar-none">
             {storyU.map((user) => (
                 <Story key={user.id} username={user.username} img={user.img}></Story>
             ))}
