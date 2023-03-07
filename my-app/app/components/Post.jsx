@@ -1,7 +1,7 @@
 import React from 'react';
 import { DocumentPlusIcon, HeartIcon, ChatBubbleLeftIcon, BookmarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-
+import { HiOutlineEmojiHappy } from 'react-icons/hi';
 export default function Post({ img, userImg, caption, username, id }) {
     console.log(username);
     return (
@@ -21,12 +21,22 @@ export default function Post({ img, userImg, caption, username, id }) {
             {/* Image 태그에 object-fit:cover,fill 속성 제거해봄 
             추후에 주의해서 볼 것 */}
             <div className="flex justify-between px-4 pt-4">
-                <div className="flex space-x-4 ">
+                <div className="flex space-x-4">
                     <HeartIcon className="btn" />
                     <ChatBubbleLeftIcon className="btn" />
                 </div>
                 <BookmarkIcon className="btn" />
             </div>
+
+            <p className="p-5 truncate">
+                <span className="mr-5 font-bold">{username}</span>
+                {caption}
+            </p>
+            <form className="flex items-center p-4">
+                <HiOutlineEmojiHappy className="h-7"></HiOutlineEmojiHappy>
+                <input type="text" placeholder="Enter your comment" className="flex-1 border-none focus:ring-0"></input>
+                <button className="font-bold text-blue-400 ">Post</button>
+            </form>
         </div>
     );
 }
