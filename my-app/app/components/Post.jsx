@@ -35,7 +35,7 @@ export default function Post({ img, userImg, caption, username, id }) {
             <form className="flex items-center p-4">
                 <HiOutlineEmojiHappy className="h-7"></HiOutlineEmojiHappy>
                 <input type="text" placeholder="Enter your comment" className="flex-1 border-none focus:ring-0"></input>
-                <button className="font-bold text-blue-400 ">Post</button>
+                <button className="font-bold text-blue-400 hover:text-amber-600">Post</button>
             </form>
         </div>
     );
