@@ -2,6 +2,7 @@ import React from 'react';
 import { DocumentPlusIcon, HeartIcon, ChatBubbleLeftIcon, BookmarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { HiOutlineEmojiHappy } from 'react-icons/hi';
+
 export default function Post({ img, userImg, caption, username, id }) {
     console.log(username);
     return (
