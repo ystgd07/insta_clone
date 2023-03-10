@@ -12,6 +12,7 @@ const nextConfig = {
             'mblogthumb-phinf.pstatic.net',
             'mobiinsidecontent.s3.ap-northeast-2.amazonaws.com',
             'encrypted-tbn0.gstatic.com',
+            'lh3.googleusercontent.com',
         ],
     },
 };

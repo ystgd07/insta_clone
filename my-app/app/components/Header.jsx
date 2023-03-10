@@ -6,7 +6,6 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 import { useSession, signIn, signOut } from 'next-auth/react';
 export default function Header() {
     const { data: session } = useSession();
-    console.log(session);
     return (
         <div className="sticky top-0 z-30 bg-white border-b shadow-sm">
             <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
@@ -47,7 +46,14 @@ export default function Header() {
                     {session ? (
                         <>
                             <PlusCircleIcon className="h-6 duration-200 ease-out cursor-pointer hover:scale-125 transition-tranform" />
-                            <img onClick={signOut} src={session.user.image} alt="user-image" className="h-10 rounded-full cursor-pointer" />
+                            <Image
+                                onClick={signOut}
+                                src={session?.user.image}
+                                alt="user-image"
+                                width={40}
+                                height={30}
+                                className="h-10 rounded-full cursor-pointer"
+                            />
                         </>
                     ) : (
                         <button onClick={signIn}>Sign in</button>
