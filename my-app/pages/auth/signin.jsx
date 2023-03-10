@@ -1,8 +1,6 @@
 import Header from '@/app/components/Header';
 import './globals.css';
 import { getProviders, signIn } from 'next-auth/react';
-import Image from 'next/image';
-
 export default function signin({ providers }) {
     return (
         <div className="">

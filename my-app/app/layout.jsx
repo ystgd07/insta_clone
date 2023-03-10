@@ -1,19 +1,12 @@
-import Header from './components/Header';
+'use client';
+import { SessionProvider } from 'next-auth/react';
+import App from './components/App';
 import './globals.css';
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-            {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-            <head />
-            <body>
-                <Header></Header>
-
-                {children}
-            </body>
-        </html>
+        <SessionProvider>
+            <App children={children}></App>
+        </SessionProvider>
     );
 }
