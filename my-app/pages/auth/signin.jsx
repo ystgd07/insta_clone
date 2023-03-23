@@ -4,7 +4,7 @@ import { getProviders, signIn } from 'next-auth/react';
 export default function signin({ providers }) {
     return (
         <div className="">
-            <Header />
+            {/* <Header /> */}
             <div className="flex items-center justify-center mt-20 space-x-7">
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJgPH9dF8y-wBc87ypQFbaRXBfSHuRK9RUng&usqp=CAU"

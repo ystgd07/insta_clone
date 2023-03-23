@@ -4,7 +4,6 @@ import { useRecoilState } from 'recoil';
 import Modal from 'react-modal';
 import { CameraIcon } from '@heroicons/react/24/outline';
 import { useRef, useState } from 'react';
-import { async } from '@firebase/util';
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { db, storage } from '@/firebase';
 import { useSession } from 'next-auth/react';
@@ -64,7 +63,7 @@ export default function UploadModal() {
                                 onClick={() => setSelectedFile(null)}
                                 src={selectedFile}
                                 alt=""
-                                className="w-full max-h-[250px] object-cotain cursor-pointer"
+                                className="w-full max-h-[250px] object-cover cursor-pointer"
                             />
                         ) : (
                             <CameraIcon
