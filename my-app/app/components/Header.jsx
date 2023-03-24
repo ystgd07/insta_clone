@@ -6,10 +6,11 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { useRecoilState } from 'recoil';
 import { modalState } from '@/atom/modalAtom';
+import { useRouter } from 'next/router';
 export default function Header() {
     const { data: session } = useSession();
     const [open, setOpen] = useRecoilState(modalState);
-
+    const router = useRouter();
     return (
         <div className="sticky top-0 z-30 bg-white border-b shadow-sm">
             <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
@@ -19,6 +20,7 @@ export default function Header() {
                         src="http://www.jennexplores.com/wp-content/uploads/2015/09/Instagram_logo_black.png"
                         className="object-contain"
                         fill
+                        onClick={() => router.push('/')}
                     />
                 </div>
 
